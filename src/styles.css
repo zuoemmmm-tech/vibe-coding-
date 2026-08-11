@@ -1,0 +1,326 @@
+:root {
+  font-family: Inter, "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  color: #17211f;
+  background: #eef1ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+aside {
+  background: #13201d;
+  color: #f7faf4;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand strong,
+.brand span {
+  display: block;
+}
+
+.brand span,
+.muted,
+.side-note {
+  color: #6f7f79;
+}
+
+aside .brand span,
+aside .side-note {
+  color: #c5d0c9;
+}
+
+nav {
+  display: grid;
+  gap: 8px;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+nav button,
+.primary,
+.secondary {
+  min-height: 44px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px;
+}
+
+nav button {
+  justify-content: flex-start;
+  color: #dbe5df;
+  background: transparent;
+}
+
+nav button.active,
+nav button:hover {
+  background: #263a34;
+}
+
+.side-note {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.content {
+  padding: 28px;
+  overflow: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid.two {
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+}
+
+.panel {
+  background: #fbfcf9;
+  border: 1px solid #dfe6df;
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  color: #31423c;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #cfd8d1;
+  border-radius: 8px;
+  background: #fff;
+  color: #17211f;
+  padding: 12px 14px;
+  outline: none;
+}
+
+textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #28765f;
+  box-shadow: 0 0 0 3px rgba(40, 118, 95, 0.14);
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  background: #edf2ed;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.segmented button,
+.chips button {
+  border-radius: 6px;
+  background: transparent;
+  min-height: 36px;
+  color: #354640;
+}
+
+.segmented button.active,
+.chips button.selected {
+  background: #ffffff;
+  color: #11513f;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.primary {
+  margin-top: 16px;
+  width: 100%;
+  background: #28765f;
+  color: white;
+}
+
+.secondary {
+  margin-top: 14px;
+  width: 100%;
+  background: #dfe9d6;
+  color: #18382f;
+}
+
+.insights,
+.cards,
+.assistant-result {
+  display: grid;
+  gap: 12px;
+}
+
+.insight,
+.decision-card,
+.assistant-result article {
+  border: 1px solid #e1e8e1;
+  border-radius: 8px;
+  padding: 14px;
+  background: #fff;
+}
+
+.insight span,
+.decision-card span,
+.status-row span {
+  color: #28765f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.insight p,
+.decision-card p,
+.assistant-result p,
+.block p,
+.block li {
+  line-height: 1.7;
+  color: #43534e;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.decision-card {
+  display: grid;
+  grid-template-columns: 1fr 42px;
+  gap: 14px;
+  text-align: left;
+}
+
+.decision-card button {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #f0f4f0;
+  color: #52645d;
+}
+
+.status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.status-row span {
+  background: #e8f1e8;
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.detail {
+  max-width: 980px;
+}
+
+.block {
+  border-top: 1px solid #e4e9e4;
+  padding: 14px 0;
+}
+
+.block strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.block ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.review {
+  margin-top: 12px;
+  background: #f3f7f2;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.review-grid {
+  display: grid;
+  gap: 10px;
+}
+
+@media (max-width: 860px) {
+  main,
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    min-height: auto;
+  }
+
+  nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
